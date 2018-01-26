@@ -43,7 +43,7 @@ app.get('/about', (req, res) =>{
     res.render('about.hbs', {
         pageTitle:'About Page',
         currentYear: 2017,
-        welcomeMessage: "Welcome About Sanitarium",
+        welcomeMessage: "welcome to the About section",
         color: "grey"
     })
 });
@@ -52,11 +52,19 @@ app.get('/', (req, res) =>{
     res.render('home.hbs', {
         pageTitle:'Home Page',
         currentYear: 2017,
-        welcomeMessage: "Welcome Home Sanitarium",
+        welcomeMessage: "welcome to the Home section",
         color: "blue"
     })
 });
 
+app.get('/project', (req, res) =>{
+    res.render('project.hbs', {
+        pageTitle:'Project Page',
+        currentYear: 2017,
+        welcomeMessage: "welcome to the Projects section",
+        color: "red"
+    })
+});
 
 
 app.listen(port,() => {
